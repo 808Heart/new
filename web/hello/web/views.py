@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect
+from django.shortcuts import render
 def index(request):
-        return HttpResponse("Index")
+    return render(request, "index.html")
 def about(request):
     return HttpResponse("About")
 def contact(request):
