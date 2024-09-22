@@ -19,7 +19,7 @@ from django.views.generic import TemplateView
 from web import views
 urlpatterns = [
 path('', views.index),
-path('', views.index),
 path('about/', TemplateView.as_view(template_name="web/about.html")),
-path('contact/', TemplateView.as_view(template_name="web/contact.html")),
+path('contact/', TemplateView.as_view(template_name="web/contact.html",
+extra_context={"work": "Разработка программных продуктов"})),
 ]
